@@ -6,22 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cronômetro Web [HTML, JS]</title>
+    <link rel="Stylesheet" type="text/CSS" href="./Styles.css">
 </head>
 
 <body>
-    <form name="form_main">
+    <!-- Na estrutura em HTML foi criado alguns span para apresentação das informações de tempo,
+        após isso temos 3 botões para controlar as funcionalidades do cronometro. -->
+    <form name="form_main" class="form">
         <div>
             <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span
                 id="millisecond">000</span>
         </div>
 
-            <br />
+        <br/>
 
-            <button type="button" name="start">start</button>
-            <button type="button" name="pause">pause</button>
-            <button type="button" name="reset">reset</button>
+        <button type="button" name="start">Start</button>
+        <button type="button" name="pause">Pause</button>
+        <button type="button" name="reset">Reset</button>
 
     </form>
 </body>
+<script src="./script.js"></script>
 
 </html>
