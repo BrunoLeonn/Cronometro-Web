@@ -2,6 +2,8 @@
 as funções aos seus botões.*/
 
 "use strict";
+// Strict mode é uma forma de optar por uma variante restrita do JS.
+
 
 let hour = 0;
 let minute = 0;
@@ -9,6 +11,14 @@ let second = 0;
 let millisecond = 0;
 
 let cron;
+
+/* let: declara uma variável local no escopo do bloco atual, opcionalmente iniciando com um valor
+ # let só funciona no bloco declarado #
+ var: declara variável global no código
+ const: não pode atribuir algo a constante, diferente de let.
+ cron: Uma maneira de agendar tarefas ou fazer com que elas se repitam a
+ cada x intervalo de tempo.
+*/
 
 document.form_main.start.onclick = () => start();
 document.form_main.pause.onclick = () => pause();
@@ -32,7 +42,7 @@ function reset() {
     document.getElementById('hour').innerText = '00';
     document.getElementById('minute').innerText = '00';
     document.getElementById('second').innerText = '00';
-    document.getElementById('millisecond').innerText = '000';
+    document.getElementById('millisecond').innerText = '00';
 }
 
 /* Aqui temos as funções start, pause e reset,
@@ -49,7 +59,7 @@ por tanto antes de iniciar os procedimentos é chamado a função pause .
 */
 
 function timer() {
-    if ((millisecond += 10) == 1000) {
+    if ((millisecond += 1) == 100) {
         millisecond = 0;
         second++;
     }
